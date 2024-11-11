@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> {% block title %}{% endblock %} | Blog Personal</title>
+        <!-- Cabacera y menu -->
+        <ul>
+            {% comment %} <li><a href="/">Principal</a></li> {% endcomment %}
+            <li><a href='{% url 'home' %}'>Principal</a></li>
+
+            {% comment %} <li><a href="/about-me/">Sobre Mi</a></li> {% endcomment %}
+            <li><a href='{% url 'about' %}'>Sobre mi...</a></li>
+
+            {% comment %} <li><a href="/portfolio/">Portafolio de Evidencia</a></li> {% endcomment %}
+            <li><a href='{% url 'portfolio' %}'>Portafolio</a></li>
+
+            {% comment %} <li><a href="/contact/">Contacto</a></li> {% endcomment %}
+            <li><a href='{% url 'contact' %}'>Contacto</a></li>
+        </ul>
+        <!-- Contenido -->
+        {% block content %}{% endblock %}
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+    
+    </body>
+</html>
